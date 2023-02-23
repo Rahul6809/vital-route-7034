@@ -10,6 +10,13 @@ body{
     background-repeat: no-repeat;
     
 }
+.nav{
+    width: 100%;
+    display: grid;
+     border: 2px solid red;
+    height: 100px;
+    background-color: aqua;
+  }
 .box{
     display: flex;
     justify-content: center;
