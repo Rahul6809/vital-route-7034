@@ -222,3 +222,28 @@ border: 3px solid red;
     height: 150px;
   
   }
+
+
+  /* popular brand */
+
+  .pb_cont{
+    display: grid;
+    width: 78.6%;
+    border: 2px solid blue;
+    margin-left: 155px;
+    margin-top: 15px;
+  }
+  .pb_cont>div{
+    border: 3px solid black;
+  }
+  .pb_cont>div>div{
+    display: flex;
+    border: 3px solid yellow;
+  }
+  .pb_cont>div>div>div{
+    display: flex;
+    border: 2px solid red;
+  }
+  #po{
+    display: grid;
+  }
