@@ -13,10 +13,11 @@
    background-color:#FFD54F;
   }
   #nav_lo{
-    width: 50%;
+    width: 55%;
     display: flex;
     margin-left: 125px;
     align-items: end;
+    margin-bottom: 12px;
     /* border: 2px solid blue; */
     
     
@@ -111,20 +112,20 @@
   font-size: 20px;
 }
 
-  .container{
+  .containerr{
     width: 78.6%;
     margin-left: 155px;
     display: flex;
     /* border: 2px solid yellow; */
     margin-top: 15px;
   }
-  .container>img{
+  .containerr>img{
     
     width: 550px;
     height: 600px;
   }
 
-  .container>div{
+  .containerr>div{
     width: 57.6%;
     display: grid;
     /* border: 5px solid red; */
@@ -146,12 +147,12 @@
     
     /* grid-template-columns: 80%; */
   }
-  .container>div>div>h3{
+  .containerr>div>div>h3{
     font-size: 22px;
     margin-bottom: 0%;
     margin-top: 1%;
   }
-  .container>div>div>div{
+  .containerr>div>div>div{
     width: 100%;
     display: flex;
     /* border: 5px solid green; */
@@ -227,12 +228,44 @@
     margin-bottom: 10px;
     
   }
+
+
+  /* new */
   .ny_cont{
     display: grid;
     width: 78.6%;
     /* border: 2px solid yellowgreen; */
     margin-left: 155px;
     margin-top: 35px;
+  }
+  .ny_cont>div{
+    display: flex;
+    margin-top: 22px;
+    /* border: 2px solid yellowgreen; */}
+    .ny_cont>div img{
+      height: 302px;
+    }
+  .ny_cont>div>div{
+    display: flex;
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+  .ny_cont>div>div>div{
+    border: 0.5px solid rgb(206, 205, 205);
+    height: 300px;
+    
+  }
+  .ny_cont>div>div>div img{
+    width: 150px;
+    height: 180px;
+    margin-left: 35px;
+  }
+  .ny_cont>div>div>div p{
+    margin-top: 22px;
+    font-size: 12px;
+  }
+  .ny_cont>div>div>div h3{
+    margin-top: 22px;
   }
   /* Enjoy life */
   .ej_cont{
@@ -411,3 +444,7 @@ display: flex;
     height: 35px;
     
   }
+
+  
+
+

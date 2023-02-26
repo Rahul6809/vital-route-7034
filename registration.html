@@ -20,27 +20,27 @@
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" placeholder="Enter your name" required id="name">
           </div>
           <div class="input-box">
             <span class="details">Username</span>
-            <input type="text" placeholder="Enter your username" required>
+            <input type="text" placeholder="Enter your username" required id="user">
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            <input type="text" placeholder="Enter your email" required id="email">
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
+            <input type="text" placeholder="Enter your number" required id="phone">
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
+            <input type="text" placeholder="Enter your password" required id="pass">
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required>
+            <input type="text" placeholder="Confirm your password" required id="cpass">
           </div>
         </div>
         <div class="gender-details">
@@ -64,11 +64,47 @@
           </div>
         </div>
         <div class="button">
-          <input type="submit" value="Register">
+          <input type="submit" value="Register" onclick="opennPopup()">
         </div>
       </form>
-    </div>
+      
   </div>
-
+  
+  <div class="popupp" id="popupp">
+    <img src="image/pop.jpg" alt="error">
+    <h2>Welcome TechFinity Family!</h2>
+    <p>Your detail has been succesfully submited.Thanks!</p>
+    <a href="login.html"><button type="button" onclick="clossePopup()" >OK</button></a>
+</div>
+  </div>
 </body>
 </html>
+<script>
+  let popup =document.getElementById("popupp");
+  function opennPopup(){
+      popup.classList.add("openn-popup");
+
+      let name,email,usr,psw,ph,cpsw;
+name=document.getElementById("name").value;
+usr=document.getElementById("user").value;
+email=document.getElementById("email").value;
+psw=document.getElementById("pass").value;
+ph=document.getElementById("phone").value;
+cpsw=document.getElementById("cpass").value;
+
+localStorage.setItem("name",name)
+localStorage.setItem("user",usr)
+localStorage.setItem("email",email)
+localStorage.setItem("pass",psw)
+localStorage.setItem("cpass",cpsw)
+localStorage.setItem("phone",ph)
+
+  }
+  function clossePopup(){
+      popup.classList.remove("openn-popup");
+      
+
+  }
+
+
+</script>

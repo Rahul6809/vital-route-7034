@@ -37,7 +37,7 @@
         </div>
 
         <div class="input-field">
-            <input type="submit" class="submit" value="Login" id="">
+            <input type="submit" class="submit" value="Login" onclick="openPopup()">
         </div>
 
         <div class="two-col">
@@ -48,12 +48,36 @@
             <div class="two">
                 <label><a href="#">Forgot password?</a></label>
             </div>
+
+            
             
         </div>
         <div class="reg">
             <a href="registration.html" id="link">No Account ? Sign up</a>
         </div>
     </div>
+
+    <div class="popup" id="popup">
+        <img src="image/pop.jpg" alt="error">
+        <h2>Thank you!</h2>
+        <p>Login Successful!</p>
+        <a href="index.html"><button type="button" onclick="closePopup()" >OK</button></a>
+
+
+    </div>
 </div>  
 </body>
 </html>
+<script>
+    let popup =document.getElementById("popup");
+    function openPopup(){
+        popup.classList.add("open-popup");
+
+
+    }
+    function closePopup(){
+        popup.classList.remove("open-popup");
+        
+
+    }
+</script>
