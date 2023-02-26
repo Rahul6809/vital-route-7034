@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="bestSelling.css">
+    <title>TechFinity</title>
+</head>
+<body>
+    <div class="nav">
+        <div id="nav_up">
+          <img src="image/logo.png" alt="error">
+        <div id="serc">
+            <input placeholder="Search" type="search" id="search" />
+            <a href="#"><i class="fa fa-search icon-search"></i></a>
+            
+        </div>
+        <div><li><i class="fa-solid fa-user-large icon-user">
+        </i>
+        <a>Sign In</a>
+      <ul>
+        <li><a href="./login.html">Login</a></li>
+        <li><a href="./registration.html">Registration</a></li>
+      </ul></li></div>
+        
+    <div><i class="fa fa-shopping-cart" style="font-size:40px"></i></div>
+        
+        </div>
+    
+        
+    <div id="nav_lo">
+      <div id="cat">
+        <li><a >Category</a>
+        <ul>
+          <li><a href="#">Local Warehouse</a></li>
+          <li><a href="#">Sports & Outdoors</a></li>
+          <li><a href="#">Smart Home & Gadget</a></li>
+          <li><a href="#">Computer,Tablets & Accessories</a></li>
+          <li><a href="#">Phone & Accessories</a></li>
+          <li><a href="#">Wereable Device</a></li>
+        </ul>
+      </li>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="#new">New</a>
+      <a href="#bestSelling">bestselling</a>
+      <a href="#brand">brand</a>
+      <a href="#deal">deal</a>
+      <a href="#clearence">clearence</a>
+      <a href="#geek">What Techfinity</a>
+    </div>
+       </div> 
+       <div id="cart-containerr"></div>
+
+
+       <div class="bottom">
+        <div id="frm">
+          
+            <input placeholder="Enter email to get $60 off coupons" type="email" id="subscribe" />
+            <input type="submit" value="Subscribe" id="sub_btn" />
+          
+        </div>
+        
+        <div id="supor">
+          
+          <div id="hep"><h4>Help</h4>
+          <p>Order Status</p>
+          <p>About Us</p>
+          <p>Contect Us</p>
+          <p>FAQs</p></div>
+        
+          <div id="poly"><h4>Policies</h4>
+            <p>Term & Condition</p>
+            <p>Return Policy</p>
+            <p>Declration</p>
+            <p>Privacy</p></div>
+        
+        
+            <div id="cws"><h4>Contact With us</h4>
+              <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">twitter</a>
+                    <a href="#">linkedin</a></div>
+              
+        
+        </div>
+        <div id="paym">
+          
+          <img src="image/giro.jpg" alt="error">
+          <img src="image/payp.jpeg" alt="error">
+          <img src="image/upi.jpeg" alt="error">
+          <img src="image/maste.jpeg" alt="error">
+          <img src="image/aneri.jpeg" alt="error">
+        </div>
+        
+        
+        </div>
+</body>
+</html>
+<script>
+
+
+    let Cart=JSON.parse(localStorage.getItem("cart"))||[]
+    let Container=document.getElementById("cart-container")
+    function DisplayProduct(data){
+      Container.innerHTML=""
+        data.forEach((product)=>{
+            let card=document.createElement("div")
+            let image=document.createElement("img")
+            let details=document.createElement("p")
+            let cardd=document.createElement("div")
+            let price=document.createElement("h4")
+            let Rating=document.createElement("p")
+            let carrdd=document.createElement("div")
+            let Remove=document.createElement("button")
+            let buy=document.createElement("button")
+              Remove.textContent="Remove"
+              buy.textContent="Buy"
+              image.src=product.image;
+              details.textContent=product.name
+              price.textContent=product.price;
+              Rating.textContent=product.rating
+            Remove.addEventListener("click",()=>{
+              Cart=Cart.filter((ele)=>{
+              return ele.id!==product.id
+            })
+            localStorage.setItem("cart",JSON.stringify(Cart))
+            alert("Product Remove From Cart")
+            DisplayProduct()
+        });
+                  
+              card.append(image,details,cardd,carrdd)
+              cardd.append(price,Rating)
+              carrdd.append(buy,Remove)
+              Container.append(card)
+              
+        })
+
+      }
+      DisplayProduct()
+
+    
+  </script>
+</script>
