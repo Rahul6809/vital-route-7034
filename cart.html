@@ -26,7 +26,7 @@
         <li><a href="./registration.html">Registration</a></li>
       </ul></li></div>
         
-    <div><i class="fa fa-shopping-cart" style="font-size:40px"></i></div>
+      <div><a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:40px"></i></a></div>
         
         </div>
     
@@ -45,8 +45,8 @@
       </li>
       </div>
       <a href="index.html">Home</a>
-      <a href="#new">New</a>
-      <a href="#bestSelling">bestselling</a>
+      <a href="new.html">New</a>
+      <a href="bestSelling.html">bestselling</a>
       <a href="#brand">brand</a>
       <a href="#deal">deal</a>
       <a href="#clearence">clearence</a>
@@ -104,7 +104,7 @@
 
 
     let Cart=JSON.parse(localStorage.getItem("cart"))||[]
-    let Container=document.getElementById("cart-container")
+    let Container=document.getElementById("cart-containerr")
     function DisplayProduct(data){
       Container.innerHTML=""
         data.forEach((product)=>{

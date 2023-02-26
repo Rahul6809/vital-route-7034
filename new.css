@@ -3,7 +3,6 @@
     font-family: 'poppins' ,sans-serif;
   margin: 0px;
   padding: 0px;
-  
 }
 body{
   background-color: rgb(241, 241, 239);
@@ -130,36 +129,34 @@ body{
 }
 
 
-#cart-containerr{
-    
+#product-container{
+    /* border: 2px solid red; */
     display: grid;
     margin-top: 20px;
     grid-template-columns:20% 20% 20% 20% ;
     grid-gap: 20px;
-    
-    
     /* margin: auto; */
     justify-content: center;
   }
-  #cart-containerr>div{
+  #product-container>div{
     /* border: 2px solid red; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 10px;
   }
-  #cart-containerr>div>img{
+  #product-container>div>img{
     height: 200px;
     width: 100%;
 
   }
-  #cart-containerr>div>p{
+  #product-container>div>p{
     margin-top: 12px;
   }
-  #cart-containerr>div>div{
+  #product-container>div>div{
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
   }
-  #cart-containerr>div>button{
+  #product-container>div>button{
      display: block;
      margin: auto;
      border: 1px solid #0277BD;
